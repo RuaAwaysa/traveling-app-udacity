@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Travel Planner</title>
+    <!-- <link rel="stylesheet" href="styles.css"> -->
+</head>
+<body>
+    <header class="header">
+        <h1>Travel Planner</h1>
+    </header>
+    <div class="travel-planner">
+        <div class="add-trip-form">
+            <div class="trip-image">
+                <img id="locationImage" src="OIP (3).jpg" alt="Location Image">
+            </div>
+            <label for="locationInput">My trip to</label>
+            <input type="text" id="locationInput" placeholder="Enter Location">
+            <label for="dateInput">Departing</label>
+            <input type="date" id="dateInput">
+            <button onclick="addTrip()">Add Trip</button>
+        </div>
+        
+        <!-- New Trip Details Card with Weather -->
+ 
+    </div>
+    <section class="trips">
+        <div class="titles">
+            <h1>My trips</h1>
+        </div>
+        <div class="trip-details">
+            <div class="trip-card">
+                <img  src="src\client\media\OIP (3).jpg" alt="Paris" class="">
+                <div class="trip-info">
+                    <h2>My trip to: Paris, France</h2>
+                    <p>Departing: 02/12/2020</p>
+                    <!-- Weather details placeholder -->
+                    <div class="weather-info">
+                        <img id="weatherIcon" src="src\client\media\cloudy.png" alt="Weather Icon">
+                        <p id="weatherDesc"></p>
+                    </div>
+                    <div class="trip-actions">
+                        <button>Save Trip</button>
+                        <button>Remove Trip</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+</body>
+</html>
