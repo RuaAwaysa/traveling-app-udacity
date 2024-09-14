@@ -146,6 +146,10 @@ body, html {
     margin-top: 20px;
     padding: 20px;
 }
+#weatherIcon {
+    height: 50;
+    width: 50;
+}
 
 // Responsive styles
 @media (max-width: 768px) {
