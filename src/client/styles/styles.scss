@@ -1,0 +1,214 @@
+// Defining variables for shared colors and styles
+$background-color-light: #fff;
+$shadow-light: 0 2px 4px rgba(0,0,0,0.1);
+$shadow-medium: 0 2px 6px rgba(0,0,0,0.1);
+$shadow-heavy: 0 4px 8px rgba(0,0,0,0.1);
+$main-color: #4CAF50;
+$hover-color: #c6f0c8;
+$text-color-main: #333;
+$text-color-secondary: #666;
+$border-color: #ccc;
+$background-color-accent: cadetblue;
+
+body, html {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: $background-color-accent;
+}
+
+.header {
+    background-color: $background-color-light;
+    text-align: center;
+    padding: 20px;
+    box-shadow: $shadow-light;
+
+    h1 {
+        margin: 0;
+        font-size: 24px;
+        color: $text-color-main;
+    }
+}
+
+.travel-planner {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 20px;
+    background-color: $background-color-accent;
+    padding: 20px;
+}
+
+.add-trip-form {
+    background-color: $background-color-light;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: $shadow-medium;
+    width: 90%;
+    max-width: 400px;
+
+    input, button {
+        width: 100%;
+        padding: 10px;
+        margin-top: 10px;
+        border: 1px solid $border-color;
+        border-radius: 4px;
+        box-sizing: border-box; // Includes padding and border in the element's width and height
+    }
+
+    button {
+        background-color: $main-color;
+        color: white;
+        border: none;
+        cursor: pointer;
+
+        &:hover {
+            background-color: $hover-color;
+        }
+    }
+}
+
+.trip-image {
+    margin-top: 20px;
+    width: 90%;
+    max-width: 400px;
+    border-radius: 10px;
+
+    img {
+        width: 100%;
+        border-radius: 8px;
+        box-shadow: $shadow-medium;
+    }
+}
+
+.trip-details {
+    width: 100%;
+    display: flex;
+    flex-direction: column;  
+    align-items: center; 
+    padding: 20px 0;
+
+    .trip-card {
+        background-color: $background-color-light;
+        display: flex;
+        flex-direction: row;  // Ensure trip info and image are in a row
+        width: 90%;
+        max-width: 600px;
+        border-radius: 8px;
+        box-shadow: $shadow-heavy;
+        overflow: hidden;
+        padding: 20px;
+        margin-bottom: 20px;  // Add margin between trip cards
+
+        img {
+            width: 150px;
+            height: 100%;
+            object-fit: cover; // Ensures the image covers the designated area
+            border-radius: 10%;
+        }
+
+        .trip-info {
+            padding: 10px;
+            flex-grow: 1;
+
+            h2 {
+                margin: 0 0 10px 0;
+                color: $text-color-main;
+                font-size: 18px;
+            }
+
+            p {
+                margin: 0;
+                color: $text-color-secondary;
+            }
+        }
+
+        .trip-actions {
+            button {
+                margin-right: 10px;
+                padding: 8px 16px;
+                background-color: $main-color;
+                color: white;
+                border: none;
+                cursor: pointer;
+                border-radius: 4px;
+
+                &:hover {
+                    background-color: $hover-color;
+                }
+            }
+        }
+    }
+}
+
+.trips {
+    background-color: $background-color-accent;
+    margin-top: 20px;
+    padding: 20px;
+}
+#weatherIcon {
+    height: 50;
+    width: 50;
+}
+
+// Responsive styles
+@media (max-width: 768px) {
+    .header h1 {
+        font-size: 20px;
+    }
+
+    .add-trip-form, .trip-details {
+        width: 95%;
+    }
+
+    .trip-card {
+        flex-direction: column;
+        align-items: center;
+        
+        img {
+            width: 100%;
+            height: auto;
+        }
+
+        .trip-info {
+            padding: 10px;
+            text-align: center;
+        }
+    }
+
+    .weather-info {
+        flex-direction: column;
+        align-items: center;
+    }
+}
+
+@media (max-width: 480px) {
+    .header h1 {
+        font-size: 18px;
+    }
+
+    .add-trip-form {
+        width: 100%;
+        padding: 10px;
+    }
+
+    .trip-card {
+        padding: 10px;
+        margin-bottom: 10px;
+
+        .trip-info {
+            padding: 5px;
+        }
+
+        .trip-actions {
+            button {
+                padding: 6px 12px;
+            }
+        }
+    }
+}
+
+.expired {
+    opacity: 0.6;
+    background-color: #e0e0e0;
+}
