@@ -1,5 +1,7 @@
-//sass files
+// Import styles
 import './styles/styles.scss'
-// js files
-// import { handleSubmit } from './js/formHandler'
-// import { isValidUrl } from './js/urlChecker'
+// Import functions from other JS files
+import { addTrip } from './js/tripHandler';
+import { isValidLocation } from './js/locationValidator';
+// Initialize event listeners
+document.getElementById('addTripButton').addEventListener('click', addTrip);
