@@ -23,7 +23,9 @@ src/
 │   ├── styles/              
 │   │   └── styles.scss               # Main SCSS file
 │   ├── js/
-│   │   ├── tripHandler.js            # Handles form submission for add trip and localStorage 
+│   │   └── __test/                  # Main JavaScript file
+│   │       ├── server.test.js  # Tests for express server
+│   │       └── testUrlChecker.spec.js   # Tests for js trip functionality
 │   │   ├── dateValidation.js             # Validates the entered Date to Ensure that no expired Date 
 |   │   ├── apiCalls.js             
 |   │   ├── locationValidator.js            
