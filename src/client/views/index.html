@@ -19,7 +19,10 @@
             <input type="text" id="locationInput" placeholder="Enter Location">
             <label for="dateInput">Departing</label>
             <input type="date" id="dateInput">
-            <button id="addTripButton" onclick="addTrip()">Add Trip</button>
+            <label for="endDateInput">Returning</label>
+            <input type="date" id="endDateInput">
+            <button id="addTripButton">Add Trip</button>
+
         </div>
         
         <!-- New Trip Details Card with Weather -->
@@ -30,22 +33,21 @@
             <h1>My trips</h1>
         </div>
         <div class="trip-details">
-            <div class="trip-card">
+            <!-- <div class="trip-card">
                 <img  src="media/OIP (3).jpg" alt="Paris" class="">
                 <div class="trip-info">
                     <h2>My trip to: Paris, France</h2>
                     <p>Departing: 02/12/2020</p>
-                    <!-- Weather details placeholder -->
                     <div class="weather-info">
                         <img id="weatherIcon" class="icon" src="media/cloudy.png" alt="Weather Icon">
                         <p id="weatherDesc"></p>
                     </div>
                     <div class="trip-actions">
                         <button>Save Trip</button>
-                        <button>Remove Trip</button>
+                        <button class="removeTripButton">Remove Trip</button>
                     </div>
                 </div>
-            </div>
+            </div> -->
         </div>
     </section>
 </body>

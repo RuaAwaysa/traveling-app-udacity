@@ -4,7 +4,7 @@ $shadow-light: 0 2px 4px rgba(0,0,0,0.1);
 $shadow-medium: 0 2px 6px rgba(0,0,0,0.1);
 $shadow-heavy: 0 4px 8px rgba(0,0,0,0.1);
 $main-color: #4CAF50;
-$hover-color: #45a049;
+$hover-color: #c6f0c8;
 $text-color-main: #333;
 $text-color-secondary: #666;
 $border-color: #ccc;
@@ -141,18 +141,70 @@ body, html {
     }
 }
 
-
 .trips {
     background-color: $background-color-accent;
     margin-top: 20px;
     padding: 20px;
 }
-.weather-info{
-    display: flex;
-    flex-direction: row;
-    padding: 10px;
+
+// Responsive styles
+@media (max-width: 768px) {
+    .header h1 {
+        font-size: 20px;
+    }
+
+    .add-trip-form, .trip-details {
+        width: 95%;
+    }
+
+    .trip-card {
+        flex-direction: column;
+        align-items: center;
+        
+        img {
+            width: 100%;
+            height: auto;
+        }
+
+        .trip-info {
+            padding: 10px;
+            text-align: center;
+        }
+    }
+
+    .weather-info {
+        flex-direction: column;
+        align-items: center;
+    }
 }
-#weatherIcon{
-  height: 20px;
-  width: 20px;  
+
+@media (max-width: 480px) {
+    .header h1 {
+        font-size: 18px;
+    }
+
+    .add-trip-form {
+        width: 100%;
+        padding: 10px;
+    }
+
+    .trip-card {
+        padding: 10px;
+        margin-bottom: 10px;
+
+        .trip-info {
+            padding: 5px;
+        }
+
+        .trip-actions {
+            button {
+                padding: 6px 12px;
+            }
+        }
+    }
+}
+
+.expired {
+    opacity: 0.6;
+    background-color: #e0e0e0;
 }
