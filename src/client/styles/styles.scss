@@ -91,7 +91,7 @@ body, html {
     .trip-card {
         background-color: $background-color-light;
         display: flex;
-        flex-direction: row;  // Ensure trip info and image are in a row
+        flex-direction: row; 
         width: 90%;
         max-width: 600px;
         border-radius: 8px;
